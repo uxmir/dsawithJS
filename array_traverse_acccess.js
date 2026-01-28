@@ -28,5 +28,16 @@ for (let i=0;i<item.length;i++){
     }
 }
 
+//total_amount of arr index
+let arr=[2,3,4,8,6,12,98];
+let amount=0;
+for(let i=0;i<arr.length;i++){
+    amount += i;
+    console.log(amount)
+}
 
+//reverse arr
+for (let i=arr.length-1;i>=0;i--){
+    console.log(arr[i])
 
+}
