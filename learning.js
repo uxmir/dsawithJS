@@ -73,3 +73,19 @@ const getCart = () => {
     } 
 };
 getCart();
+
+//task counter word
+const speech = "i love javascript and i love coding"
+function getCountWord(){
+const a=speech.split(' ')
+let wordCount={};
+a.forEach((val)=>{
+if(wordCount[val]){
+  return  wordCount[val]++
+}else{
+  return  wordCount[val]=1
+}
+})
+console.log(wordCount)
+}
+getCountWord()
