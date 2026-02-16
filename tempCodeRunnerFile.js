@@ -1,1 +1,1 @@
-  // let even={}
+console.log(Number(Math.min(splittedLenght.length)))

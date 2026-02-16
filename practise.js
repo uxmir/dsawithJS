@@ -63,66 +63,76 @@ const cart = [
   { item: "Keyboard", price: 2500, quantity: 1 },
 ];
 const getCart = () => {
-  const priceTotal =cart.reduce((total,item)=>{
-  return total+ (item.price*item.quantity);
-  
-  },0)
-    if ( priceTotal > 50000) {
-      const discount = (10 / 100) * priceTotal;
-      console.log( discount);
-    } 
+  const priceTotal = cart.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
+  if (priceTotal > 50000) {
+    const discount = (10 / 100) * priceTotal;
+    console.log(discount);
+  }
 };
 getCart();
 
 //task counter word
-const speech = "i love javascript and i love coding"
-function getCountWord(){
-const a=speech.split(' ')
-let wordCount={};
-a.forEach((val)=>{
-if(wordCount[val]){
-  return  wordCount[val]++
-}else{
-  return  wordCount[val]=1
+const speech = "i love javascript and i love coding";
+function getCountWord() {
+  const a = speech.split(" ");
+  let wordCount = {};
+  a.forEach((val) => {
+    if (wordCount[val]) {
+      return wordCount[val]++;
+    } else {
+      return (wordCount[val] = 1);
+    }
+  });
+  console.log(wordCount);
 }
-})
-console.log(wordCount)
-}
-getCountWord()
+getCountWord();
 
 //creating string reverse and output is "ianepo si emosewa" string reverse
-function reverseString(string){
-  const str=string;
-  const a=str.split(' ').reverse().join( ' ')
-console.log(a)
-const b=a.split('').reverse().join( '')
-console.log(b)
+function reverseString(string) {
+  const str = string;
+  const a = str.split(" ").reverse().join(" ");
+  console.log(a);
+  const b = a.split("").reverse().join("");
+  console.log(b);
 }
-reverseString("openai is awesome")
+reverseString("openai is awesome");
 
 //The Even-Odd Sum (Array Logic)
-const number=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const evenArr=number.filter((val)=>{
-  if(val%2===0){
-    return val
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenArr = number.filter((val) => {
+  if (val % 2 === 0) {
+    return val;
   }
-})
-console.log(evenArr)
-const resultEven= evenArr.reduce((total,item)=>{
-return total+item
-},0)
-console.log(resultEven)
+});
+console.log(evenArr);
+const resultEven = evenArr.reduce((total, item) => {
+  return total + item;
+}, 0);
+console.log(resultEven);
 //finding odd
-const oddArr=number.filter((val)=>{
-  if(val%2===1){
-    return val
+const oddArr = number.filter((val) => {
+  if (val % 2 === 1) {
+    return val;
   }
-})
-console.log(oddArr)
-const resultOdd= oddArr.reduce((total,item)=>{
-return total+item
-},0)
-console.log(resultOdd)
+});
+console.log(oddArr);
+const resultOdd = oddArr.reduce((total, item) => {
+  return total + item;
+}, 0);
+console.log(resultOdd);
 //now finding all adding even and odd
-const totalArrResult=resultEven+resultOdd;
-console.log(totalArrResult)
+const totalArrResult = resultEven + resultOdd;
+console.log(totalArrResult);
+
+//finding word minimum length in string
+
+const lengthStr="I am learning JavaScript and it is fun";
+const splittedLenght = lengthStr.split(' ')
+splittedLenght.forEach((val)=>{
+  let i=1;
+if(i>=val.length){
+  console.log(val)
+} 
+ })
