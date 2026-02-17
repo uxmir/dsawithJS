@@ -1,1 +1,5 @@
-console.log(Number(Math.min(splittedLenght.length)))
+splittedLength.forEach((val)=>{
+// if(sortestWord.length>val.length){
+//   val=sortestWord
+// }
+//  })

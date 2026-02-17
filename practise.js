@@ -127,12 +127,12 @@ const totalArrResult = resultEven + resultOdd;
 console.log(totalArrResult);
 
 //finding word minimum length in string
-
 const lengthStr="I am learning JavaScript and it is fun";
-const splittedLenght = lengthStr.split(' ')
-splittedLenght.forEach((val)=>{
-  let i=1;
-if(i>=val.length){
-  console.log(val)
-} 
+const splittedLength = lengthStr.split(' ')
+let sortestWord=splittedLength[0]
+splittedLength.forEach((val)=>{
+if(sortestWord.length>val.length){
+  sortestWord=val
+}
  })
+console.log(sortestWord)
