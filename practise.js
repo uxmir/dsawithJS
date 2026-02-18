@@ -136,3 +136,19 @@ if(sortestWord.length>val.length){
 }
  })
 console.log(sortestWord)
+
+// palindrome word in function
+function getPalindromeWrod(palinword) {
+  const a = palinword;
+  const b = a.split("").join("");
+  console.log(b);
+  const c = a.split("").reverse().join("");
+  console.log(c);
+  if (c === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const palinResult = getPalindromeWrod("racecar");
+console.log(palinResult);
