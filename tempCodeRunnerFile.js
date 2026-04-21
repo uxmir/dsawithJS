@@ -1,1 +1,1 @@
- // return false
+console.log(firstValStored)

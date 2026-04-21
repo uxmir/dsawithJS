@@ -152,3 +152,51 @@ function getPalindromeWrod(palinword) {
 }
 const palinResult = getPalindromeWrod("racecar");
 console.log(palinResult);
+
+//anagram finding in listen and silent
+function getAnagram(a,b){
+const firstVal=a.split('')
+const secondVal=b.split('')
+
+// //finding each val
+let firstValStored=[];
+firstVal.map((val)=>{
+ firstValStored.push(val)
+})
+console.log(firstValStored)
+let secondValStored=[]
+ secondVal.map((val)=>{
+  secondValStored.push(val)
+ })
+ console.log(secondValStored)
+
+if( firstVal.includes("s")  && firstVal.length===secondVal.length){
+  return true
+}else{
+  return false
+}
+}
+const anagramFuncton=getAnagram("listen","silent")
+console.log(anagramFuncton)
+
+//total result finding and category etc
+const transactions = [
+  { id: 1, category: 'Groceries', amount: 50, date: '2026-04-01', type: 'expense' },
+  { id: 2, category: 'Salary', amount: 2000, date: '2026-04-05', type: 'income' },
+  { id: 3, category: 'Electronics', amount: 300, date: '2026-04-10', type: 'expense' },
+  { id: 4, category: 'Groceries', amount: 30, date: '2026-04-12', type: 'expense' },
+  { id: 5, category: 'Freelance', amount: 500, date: '2026-04-15', type: 'income' }
+];
+
+
+const a= transactions.map((c)=>{
+const f=c?.amount
+return f
+})
+
+const m=a.reduce((total,c)=>{
+const g=total+c
+return g
+})
+const z=`total amount is :${m}`
+console.log(z)
