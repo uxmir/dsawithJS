@@ -188,7 +188,6 @@ const transactions = [
   { id: 5, category: 'Freelance', amount: 500, date: '2026-04-15', type: 'income' }
 ];
 
-
 function transaction(){
   const a= transactions.map((c)=>{
 const f=c?.amount
@@ -234,3 +233,43 @@ console.log(`totalincome is :${totalIncome}`)
 }
 
 transaction()
+
+//Dhoren, apnar kache kichu user-er information ekta array-te ache, kintu data-gulo ektu "messy" (olochalo). Karor name-e extra space ache, karor email choto-boro hater, abar keu hoyto bhasha ulto-palto likheche.
+
+const rawUsers = [
+  { id: 1, name: "  mirmonir   ", email: "MIR@gmail.com", active: true },
+  { id: 2, name: "UXMIR ", email: "uxmir@Discord.com", active: false },
+  { id: 3, name: "  JavaScriptDev", email: "JS.DEV@OUTLOOK.com", active: true },
+];
+
+function sizeArr(){
+  //triming all name
+  const a = rawUsers?.map((r)=>{
+  const a= r?.name.trim()
+  return a;
+})
+console.log(a)
+//all email into lowercase
+const b=rawUsers?.map((e)=>{
+const b=e?.email.toLowerCase();
+return b
+})
+console.log(b)
+//active true der niye notun arr
+const c=rawUsers?.filter((a)=>{
+  if(a?.active===true){
+    return a
+  }
+})
+// console.log(c)
+//summery string
+const str=c?.map((s)=>{
+  const name=s?.name.trim()
+  const email=s?.email?.trim().toLowerCase()
+  const str=`User ${name} reached at ${email}`;
+  return str
+})
+console.log(str)
+}
+
+sizeArr()

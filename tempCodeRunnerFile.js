@@ -1,1 +1,1 @@
-console.log(firstValStored)
+console.log(c)
