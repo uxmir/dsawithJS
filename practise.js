@@ -189,7 +189,8 @@ const transactions = [
 ];
 
 
-const a= transactions.map((c)=>{
+function transaction(){
+  const a= transactions.map((c)=>{
 const f=c?.amount
 return f
 })
@@ -200,3 +201,36 @@ return g
 })
 const z=`total amount is :${m}`
 console.log(z)
+
+//distructuring total expense
+const b=transactions.map((t)=>{
+  if(t?.type==='expense') {
+  const a= t?.amount
+  return a;
+  }
+  else{
+    return 0
+  }
+})
+const totalExpense=b.reduce((total,a)=>{
+  return total+a
+})
+console.log(` total expense is ${totalExpense}`)
+
+//distructing total Income
+const i=transactions.map((t)=>{
+  if(t?.type==='income') {
+  const a= t?.amount
+  return a;
+  }
+  else{
+    return 0
+  }
+})
+const totalIncome=i.reduce((total,a)=>{
+  return total+a
+})
+console.log(`totalincome is :${totalIncome}`)
+}
+
+transaction()
