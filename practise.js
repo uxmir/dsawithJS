@@ -272,6 +272,36 @@ console.log(str)
 }
 sizeArr()
 
+// Dhoren, apnar kache ekta boro "String" ba "Paragraph" ache. Apnake emon ekta function likhte hobe ja oi paragraph-ta analyze kore kichu specific jinis ber korbe.
 
+function analizeText(texts){
+//Oi paragraph-e mot koyti shobdo (word) ache seta ber korun.
+const a=texts.replaceAll('-','').trim().split(" ")?.length
+console.log(a)
+//Space chara mot koyti letter ba character ache seta dekhaben.
+const b=texts.replaceAll('-','').split("")?.length
+console.log(b)
 
+//"JavaScript" shobdo-ti puru paragraph-e koybar ache seta ber korun.
+const c=texts.trim().split(" ")
+const totalWord=[]
+c?.forEach((j)=>{
+if(j==='JavaScript'){
+totalWord.push(j)
+}
+})
+const d=totalWord?.length
+console.log(d)
 
+//Paragraph-er protiti shobdo-ke Capitalize (prothom letter boro hater) kore ekta notun string banan.
+const e=texts.replaceAll('-','').trim().split(" ")
+const upperCaseVal=[]
+e.forEach((c)=>{
+  const a=c?.charAt(0).toUpperCase() + c.slice(1)
+  upperCaseVal.push(a)
+})
+const f= upperCaseVal.join(" ")
+console.log(f)
+}
+const myText = "JavaScript is awesome. JavaScript is a high-level, often just-in-time compiled language. JavaScript is fun!";
+analizeText(myText)
