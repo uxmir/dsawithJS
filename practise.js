@@ -234,7 +234,7 @@ console.log(`totalincome is :${totalIncome}`)
 
 transaction()
 
-//Dhoren, apnar kache kichu user-er information ekta array-te ache, kintu data-gulo ektu "messy" (olochalo). Karor name-e extra space ache, karor email choto-boro hater, abar keu hoyto bhasha ulto-palto likheche.
+// //Dhoren, apnar kache kichu user-er information ekta array-te ache, kintu data-gulo ektu "messy" (olochalo). Karor name-e extra space ache, karor email choto-boro hater, abar keu hoyto bhasha ulto-palto likheche.
 
 const rawUsers = [
   { id: 1, name: "  mirmonir   ", email: "MIR@gmail.com", active: true },
@@ -261,15 +261,17 @@ const c=rawUsers?.filter((a)=>{
     return a
   }
 })
-// console.log(c)
 //summery string
 const str=c?.map((s)=>{
-  const name=s?.name.trim()
+  const name=s?.name.trim().charAt(0).toUpperCase() +s?.name.slice(3)
   const email=s?.email?.trim().toLowerCase()
   const str=`User ${name} reached at ${email}`;
   return str
 })
 console.log(str)
 }
-
 sizeArr()
+
+
+
+
