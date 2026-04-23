@@ -241,7 +241,6 @@ const rawUsers = [
   { id: 2, name: "UXMIR ", email: "uxmir@Discord.com", active: false },
   { id: 3, name: "  JavaScriptDev", email: "JS.DEV@OUTLOOK.com", active: true },
 ];
-
 function sizeArr(){
   //triming all name
   const a = rawUsers?.map((r)=>{
@@ -305,3 +304,25 @@ console.log(f)
 }
 const myText = "JavaScript is awesome. JavaScript is a high-level, often just-in-time compiled language. JavaScript is fun!";
 analizeText(myText)
+
+//Dhoren, apnar kache kichu product-er list ache. Apnake segulo category onujayi group korte hobe.
+function arrGroup(){
+  const products = [
+  { name: "iPhone", cat: "Electronics" },
+  { name: "Bread", cat: "Food" },
+  { name: "Laptop", cat: "Electronics" },
+];
+const ElCat=[]
+const fCat=[]
+products.filter((p)=>{
+  if(p?.cat !=="Food"){
+   ElCat.push(p)
+  }else{
+    fCat.push(p)
+  }
+})
+const items=[]
+items.push(ElCat,fCat)
+console.log('items:',items)
+}
+arrGroup()
