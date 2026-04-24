@@ -127,15 +127,15 @@ const totalArrResult = resultEven + resultOdd;
 console.log(totalArrResult);
 
 //finding word minimum length in string
-const lengthStr="I am learning JavaScript and it is fun";
-const splittedLength = lengthStr.split(' ')
-let sortestWord=splittedLength[0]
-splittedLength.forEach((val)=>{
-if(sortestWord.length>val.length){
-  sortestWord=val
-}
- })
-console.log(sortestWord)
+const lengthStr = "I am learning JavaScript and it is fun";
+const splittedLength = lengthStr.split(" ");
+let sortestWord = splittedLength[0];
+splittedLength.forEach((val) => {
+  if (sortestWord.length > val.length) {
+    sortestWord = val;
+  }
+});
+console.log(sortestWord);
 
 // palindrome word in function
 function getPalindromeWrod(palinword) {
@@ -154,85 +154,113 @@ const palinResult = getPalindromeWrod("racecar");
 console.log(palinResult);
 
 //anagram finding in listen and silent
-function getAnagram(a,b){
-const firstVal=a.split('')
-const secondVal=b.split('')
+function getAnagram(a, b) {
+  const firstVal = a.split("");
+  const secondVal = b.split("");
 
-// //finding each val
-let firstValStored=[];
-firstVal.map((val)=>{
- firstValStored.push(val)
-})
-console.log(firstValStored)
-let secondValStored=[]
- secondVal.map((val)=>{
-  secondValStored.push(val)
- })
- console.log(secondValStored)
+  // //finding each val
+  let firstValStored = [];
+  firstVal.map((val) => {
+    firstValStored.push(val);
+  });
+  console.log(firstValStored);
+  let secondValStored = [];
+  secondVal.map((val) => {
+    secondValStored.push(val);
+  });
+  console.log(secondValStored);
 
-if( firstVal.includes("s")  && firstVal.length===secondVal.length){
-  return true
-}else{
-  return false
+  if (firstVal.includes("s") && firstVal.length === secondVal.length) {
+    return true;
+  } else {
+    return false;
+  }
 }
-}
-const anagramFuncton=getAnagram("listen","silent")
-console.log(anagramFuncton)
+const anagramFuncton = getAnagram("listen", "silent");
+console.log(anagramFuncton);
 
 //total result finding and category etc
 const transactions = [
-  { id: 1, category: 'Groceries', amount: 50, date: '2026-04-01', type: 'expense' },
-  { id: 2, category: 'Salary', amount: 2000, date: '2026-04-05', type: 'income' },
-  { id: 3, category: 'Electronics', amount: 300, date: '2026-04-10', type: 'expense' },
-  { id: 4, category: 'Groceries', amount: 30, date: '2026-04-12', type: 'expense' },
-  { id: 5, category: 'Freelance', amount: 500, date: '2026-04-15', type: 'income' }
+  {
+    id: 1,
+    category: "Groceries",
+    amount: 50,
+    date: "2026-04-01",
+    type: "expense",
+  },
+  {
+    id: 2,
+    category: "Salary",
+    amount: 2000,
+    date: "2026-04-05",
+    type: "income",
+  },
+  {
+    id: 3,
+    category: "Electronics",
+    amount: 300,
+    date: "2026-04-10",
+    type: "expense",
+  },
+  {
+    id: 4,
+    category: "Groceries",
+    amount: 30,
+    date: "2026-04-12",
+    type: "expense",
+  },
+  {
+    id: 5,
+    category: "Freelance",
+    amount: 500,
+    date: "2026-04-15",
+    type: "income",
+  },
 ];
 
-function transaction(){
-  const a= transactions.map((c)=>{
-const f=c?.amount
-return f
-})
+function transaction() {
+  const a = transactions.map((c) => {
+    const f = c?.amount;
+    return f;
+  });
 
-const m=a.reduce((total,c)=>{
-const g=total+c
-return g
-})
-const z=`total amount is :${m}`
-console.log(z)
+  const m = a.reduce((total, c) => {
+    const g = total + c;
+    return g;
+  });
+  const z = `total amount is :${m}`;
+  console.log(z);
 
-//distructuring total expense
-const b=transactions.map((t)=>{
-  if(t?.type==='expense') {
-  const a= t?.amount
-  return a;
-  }
-  else{
-    return 0
-  }
-})
-const totalExpense=b.reduce((total,a)=>{
-  return total+a
-})
-console.log(` total expense is ${totalExpense}`)
+  //distructuring total expense
+  const b = transactions.map((t) => {
+    if (t?.type === "expense") {
+      const a = t?.amount;
+      return a;
+    } else {
+      return 0;
+    }
+  });
+  const totalExpense = b.reduce((total, a) => {
+    return total + a;
+  });
+  console.log(` total expense is ${totalExpense}`);
 
-//distructing total Income
-const i=transactions.map((t)=>{
-  if(t?.type==='income') {
-  const a= t?.amount
-  return a;
-  }
-  else{
-    return 0
-  }
-})
-const totalIncome=i.reduce((total,a)=>{
-  return total+a
-})
-console.log(`totalincome is :${totalIncome}`)
+  //distructing total Income
+  const i = transactions.map((t) => {
+    if (t?.type === "income") {
+      const a = t?.amount;
+      return a;
+    } else {
+      return 0;
+    }
+  });
+  const totalIncome = i.reduce((total, a) => {
+    return total + a;
+  });
+  console.log(`totalincome is :${totalIncome}`);
 }
 
-transaction()
+transaction();
 
 // //Dhoren, apnar kache kichu user-er information ekta array-te ache, kintu data-gulo ektu "messy" (olochalo). Karor name-e extra space ache, karor email choto-boro hater, abar keu hoyto bhasha ulto-palto likheche.
 
@@ -241,88 +269,89 @@ const rawUsers = [
   { id: 2, name: "UXMIR ", email: "uxmir@Discord.com", active: false },
   { id: 3, name: "  JavaScriptDev", email: "JS.DEV@OUTLOOK.com", active: true },
 ];
-function sizeArr(){
+function sizeArr() {
   //triming all name
-  const a = rawUsers?.map((r)=>{
-  const a= r?.name.trim()
-  return a;
-})
-console.log(a)
-//all email into lowercase
-const b=rawUsers?.map((e)=>{
-const b=e?.email.toLowerCase();
-return b
-})
-console.log(b)
-//active true der niye notun arr
-const c=rawUsers?.filter((a)=>{
-  if(a?.active===true){
-    return a
-  }
-})
-//summery string
-const str=c?.map((s)=>{
-  const name=s?.name.trim().charAt(0).toUpperCase() +s?.name.slice(3)
-  const email=s?.email?.trim().toLowerCase()
-  const str=`User ${name} reached at ${email}`;
-  return str
-})
-console.log(str)
+  const a = rawUsers?.map((r) => {
+    const a = r?.name.trim();
+    return a;
+  });
+  console.log(a);
+  //all email into lowercase
+  const b = rawUsers?.map((e) => {
+    const b = e?.email.toLowerCase();
+    return b;
+  });
+  console.log(b);
+  //active true der niye notun arr
+  const c = rawUsers?.filter((a) => {
+    if (a?.active === true) {
+      return a;
+    }
+  });
+  //summery string
+  const str = c?.map((s) => {
+    const name = s?.name.trim().charAt(0).toUpperCase() + s?.name.slice(3);
+    const email = s?.email?.trim().toLowerCase();
+    const str = `User ${name} reached at ${email}`;
+    return str;
+  });
+  console.log(str);
 }
-sizeArr()
+sizeArr();
 
 // Dhoren, apnar kache ekta boro "String" ba "Paragraph" ache. Apnake emon ekta function likhte hobe ja oi paragraph-ta analyze kore kichu specific jinis ber korbe.
 
-function analizeText(texts){
-//Oi paragraph-e mot koyti shobdo (word) ache seta ber korun.
-const a=texts.replaceAll('-','').trim().split(" ")?.length
-console.log(a)
-//Space chara mot koyti letter ba character ache seta dekhaben.
-const b=texts.replaceAll('-','').split("")?.length
-console.log(b)
+function analizeText(texts) {
+  //Oi paragraph-e mot koyti shobdo (word) ache seta ber korun.
+  const a = texts.replaceAll("-", "").trim().split(" ")?.length;
+  console.log(a);
+  //Space chara mot koyti letter ba character ache seta dekhaben.
+  const b = texts.replaceAll("-", "").split("")?.length;
+  console.log(b);
 
-//"JavaScript" shobdo-ti puru paragraph-e koybar ache seta ber korun.
-const c=texts.trim().split(" ")
-const totalWord=[]
-c?.forEach((j)=>{
-if(j==='JavaScript'){
-totalWord.push(j)
-}
-})
-const d=totalWord?.length
-console.log(d)
+  //"JavaScript" shobdo-ti puru paragraph-e koybar ache seta ber korun.
+  const c = texts.trim().split(" ");
+  const totalWord = [];
+  c?.forEach((j) => {
+    if (j === "JavaScript") {
+      totalWord.push(j);
+    }
+  });
+  const d = totalWord?.length;
+  console.log(d);
 
-//Paragraph-er protiti shobdo-ke Capitalize (prothom letter boro hater) kore ekta notun string banan.
-const e=texts.replaceAll('-','').trim().split(" ")
-const upperCaseVal=[]
-e.forEach((c)=>{
-  const a=c?.charAt(0).toUpperCase() + c.slice(1)
-  upperCaseVal.push(a)
-})
-const f= upperCaseVal.join(" ")
-console.log(f)
+  //Paragraph-er protiti shobdo-ke Capitalize (prothom letter boro hater) kore ekta notun string banan.
+  const e = texts.replaceAll("-", "").trim().split(" ");
+  const upperCaseVal = [];
+  e.forEach((c) => {
+    const a = c?.charAt(0).toUpperCase() + c.slice(1);
+    upperCaseVal.push(a);
+  });
+  const f = upperCaseVal.join(" ");
+  console.log(f);
 }
-const myText = "JavaScript is awesome. JavaScript is a high-level, often just-in-time compiled language. JavaScript is fun!";
-analizeText(myText)
+const myText =
+  "JavaScript is awesome. JavaScript is a high-level, often just-in-time compiled language. JavaScript is fun!";
+analizeText(myText);
 
 //Dhoren, apnar kache kichu product-er list ache. Apnake segulo category onujayi group korte hobe.
-function arrGroup(){
+function arrGroup() {
   const products = [
-  { name: "iPhone", cat: "Electronics" },
-  { name: "Bread", cat: "Food" },
-  { name: "Laptop", cat: "Electronics" },
-];
-const ElCat=[]
-const fCat=[]
-products.filter((p)=>{
-  if(p?.cat !=="Food"){
-   ElCat.push(p)
-  }else{
-    fCat.push(p)
-  }
-})
-const items=[]
-items.push(ElCat,fCat)
-console.log('items:',items)
+    { name: "iPhone", cat: "Electronics" },
+    { name: "Bread", cat: "Food" },
+    { name: "Laptop", cat: "Electronics" },
+  ];
+  const ElCat = [];
+  const fCat = [];
+  products.filter((p) => {
+    if (p?.cat !== "Food") {
+      ElCat.push(p);
+    } else {
+      fCat.push(p);
+    }
+  });
+  const items = [];
+  items.push(ElCat, fCat);
+  console.log("items:", items);
 }
-arrGroup()
+arrGroup();
