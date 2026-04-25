@@ -355,3 +355,18 @@ function arrGroup() {
   console.log("items:", items);
 }
 arrGroup();
+
+//finding 2nd string in first
+//didnot solved
+function findIdStr(a,b){
+const y=a.split('')
+const x=b.split('')
+y.forEach((s,idx)=>{
+x.forEach((f)=>{
+if(y.includes(f[0])) {
+console.log(s[idx])
+}   
+})
+})
+}
+findIdStr("sadbutsad","sad")
