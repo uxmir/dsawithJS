@@ -1,4 +1,4 @@
-// // task_1 reverse string
+// // // task_1 reverse string
 function reverseString(name) {
   const m = name.split("").reverse().join("");
   console.log(m);
@@ -25,7 +25,7 @@ findVowel(
   "JavaScript is an amazing programming language. It allows developers to create interactive web applications with ease. Learning to code opens up a world of endless possibilities and innovation!",
 );
 
-//task_4 finding big string
+// //task_4 finding big string
 function bigStr(str) {
   let max = 0;
   const arr1 = [];
@@ -46,3 +46,30 @@ function bigStr(str) {
 }
 
 bigStr("mirmonir is a bad");
+
+//task_6 replaicng word in string
+function replaceStr(str){
+//this is a first way    
+const a=str.replaceAll("JavaScript","Python")
+console.log(a)
+// this is second way
+const b=str.replace(".","").split(" ")
+b.filter((t)=>{
+if(t==="JavaScript"){
+    t="Python"
+}
+console.log(t)
+})
+
+}
+replaceStr("I love JavaScript. JavaScript is fun!")
+
+//task_7 stringe shudshu number ber kora
+function findNumber(n){
+if(isNaN(n)){
+console.log("it's not  a number")
+}else{
+ console.log("this is  a number")
+}
+}
+findNumber("1235")
