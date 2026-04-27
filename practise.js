@@ -359,14 +359,15 @@ arrGroup();
 //finding 2nd string in first
 //didnot solved
 function findIdStr(a,b){
+const repetArrId=[]    
 const y=a.split('')
 const x=b.split('')
-y.forEach((s,idx)=>{
-x.forEach((f)=>{
-if(y.includes(f[0])) {
-console.log(s[idx])
-}   
+y.filter((v,idx)=>{
+ if(x.includes(v)){
+    repetArrId.push(idx)
+ }   
 })
-})
+const c=repetArrId?.slice(0,1)
+console.log(c)
 }
 findIdStr("sadbutsad","sad")
