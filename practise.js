@@ -396,3 +396,22 @@ function plainArr() {
   console.log(planArr);
 }
 plainArr();
+
+// array filter task
+function searchArr(){
+  const history = [
+  { role: "system", content: "You are a helpful bot" },
+  { role: "user", content: "Hi" },
+  { role: "assistant", content: "Hello!" },
+  { role: "user", content: "Order pizza" },
+  { role: "assistant", content: "Order placed" },
+];
+const arr = [];
+const a = history?.filter((a) => {
+  const data = a?.role === "user" || a?.role === "assistant";
+  if (data) arr.push(a?.role + ":" + a?.content);
+});
+
+console.log(arr)
+}
+searchArr()
