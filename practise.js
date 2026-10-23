@@ -358,16 +358,41 @@ arrGroup();
 
 //finding 2nd string in first
 //didnot solved
-function findIdStr(a,b){
-const repetArrId=[]    
-const y=a.split('')
-const x=b.split('')
-y.filter((v,idx)=>{
- if(x.includes(v)){
-    repetArrId.push(idx)
- }   
-})
-const c=repetArrId?.slice(0,1)
-console.log(c)
+function findIdStr(a, b) {
+  const repetArrId = [];
+  const y = a.split("");
+  const x = b.split("");
+  y.filter((v, idx) => {
+    if (x.includes(v)) {
+      repetArrId.push(idx);
+    }
+  });
+  const c = repetArrId?.slice(0, 1);
+  console.log(c);
 }
-findIdStr("sadbutsad","sad")
+findIdStr("sadbutsad", "sad");
+
+//making array as an plain array
+function plainArr() {
+  const a = [1, [2, [3, 4], 5]];
+  const planArr = [];
+  const b = a.forEach((a) => {
+    if (!Array.isArray(a)) {
+      planArr.push(a);
+    }
+    if (Array.isArray(a)) {
+      a.forEach((b) => {
+        if (!Array.isArray(b)) {
+          planArr.push(b);
+        }
+        if (Array.isArray(b)) {
+          b.forEach((c) => {
+            planArr.push(c);
+          });
+        }
+      });
+    }
+  });
+  console.log(planArr);
+}
+plainArr();
