@@ -1,5 +1,1 @@
-      if (Array.isArray(c)) {
-        c.forEach((d) => {
-          planArr.push(d);
-        });
-      }
+console.log(arr)
