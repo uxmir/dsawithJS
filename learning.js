@@ -19,37 +19,30 @@
 // };
 // console.log(arrObj);
 
-const people = [
-  { name: "Alice", age: 21 },
-  { name: "Max", age: 20 },
-  { name: "Jane", age: 20 },
-   { name: "Jane", age: 30 },
-];
-const ageArr = people
-  .filter((a) => {
-    if (a.age && !isNaN(Number(a.age))) return a.age;
-  })
-  ?.map((c) => c.age);
- console.log(ageArr)
-
-const result =Object.groupBy(people,({age})=>{
-  ageArr.forEach((a)=>{
-    if(a===age) return a
-  })
-})
-console.log(result)
-//  people.filter((x)=>{
-//  if(ageArr.includes(x.age)){
-//   console.log(x)
-//  }
-//  })
-//   const arr=[]
-// ageArr.filter((a)=>{
-//   people.filter((b)=>{
-//     if(a===b.age){
-//       arr.push(b)
-//     }
-//   })
+// const  a=Object.groupBy((people,{age})=>{
+//   return age
 // })
+// console.log
 
-// console.log(arr)
+function romanToInt(a){
+const romanValue = [
+  { roman: "I", value: 1 },
+  { roman: "V", value: 5 },
+  { roman: "X", value: 10 },
+  { roman: "L", value: 50 },
+  { roman: "C", value: 100 },
+  { roman: "D", value: 500 },
+  { roman: "M", value: 1000 }
+];
+
+const y=a.split("");
+console.log(y)
+const m=y.map((n)=>{
+if(romanValue.includes(n)){
+  console.log(romanValue.roman)
+}
+})
+console.log(m)
+}
+
+romanToInt("III")
